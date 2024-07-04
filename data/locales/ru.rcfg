@@ -1,0 +1,305 @@
+META-locale_name: Русский
+yes: да
+no: нет
+account: Аккаунт
+group: Группа
+
+ONBOARDING-program_activation_header: Активация программы
+ONBOARDING-enter_license_key: Введите свой лицензионный ключ
+ONBOARDING-activation_success: Спасибо за покупку! Программа активирована и привязана к компьютеру.
+
+MENU-header: Главное меню
+MENU-welcome: Добро пожаловать в {0} {1}!
+MENU-license_expiry: Ваша лицензия истекает через {} дней.
+MENU-license_expiry-eternal_license: У вас [green]вечная[/green] лицензия!
+MENU-consumables_stats: Загружено {0} аккаунтов и {1} прокси.
+
+ACCOUNT-database_locked: Аккаунт {} залочен. Перезапустите программу, чтобы его использовать
+ACCOUNT-lock_is_acquired: Аккаунт {} заблокирован другим потоком программы. Ожидаем разблокировки...
+ACCOUNT-lock_is_released: Аккаунт {} разблокирован и начинает работу!
+ACCOUNT-json_not_found: JSON-файл не найден для аккаунта {}. Пропускаем аккаунт.
+
+INPUT_MANAGER-int_input_prefix: Выберите пункт
+INPUT_MANAGER-must_be_int: Введите число!
+INPUT_MANAGER-must_be_in_range: Введите число в указаном диапазоне!
+INPUT_MANAGER-bool_choice_prefix: Выберите пункт
+INPUT_MANAGER-no_such_variant: Такого варианта нет!
+INPUT_MANAGER-keyboard_interrupt_msg: Нажмите Ctrl+C ещё раз, чтобы закрыть программу
+INPUT_MANAGER-multiline_input_done: Загружено {} элементов
+INPUT_MANAGER-multiline_input_none: Вы ничего не ввели! Пожалуйста, вставьте или напишите текст и нажмите ENTER.
+INPUT_MANAGER-input_none: Вы ничего не ввели!
+INPUT_MANAGER-range_choice_prefix: Введите число или диапазон (например 5-10)
+
+UI_MANAGER-elements: {} элементов
+
+PROXY_MANAGER-proxy_not_found: Аккаунт {} загружается без прокси!
+
+FOLDER-accounts: Аккаунты
+FOLDER-accounts_after_check: После проверки
+FOLDER-accounts-alive: Живые
+FOLDER-accounts-in_work: Для работы
+FOLDER-accounts-dead: Мёртвые
+FOLDER-accounts-temporary_spamblock: Во временном спамблоке
+FOLDER-accounts-eternal_spamblock: В вечном спамблоке
+FOLDER-audience_bases: Базы аудитории
+FOLDER-settings: Настройки
+FOLDER-system: Системные файлы
+FOLDER-reports: Отчёты о работе
+FOLDER-spammer_content_folder: Контент для рассылки
+FILE-license_key: Ключ.txt
+FILE-proxy: Прокси.txt
+FILE-settings_file: Настройки.json
+
+SETTINGS-category-general: Общее
+SETTINGS-category-inviter: Инвайтер
+SETTINGS-proxy_type: Тип прокси
+SETTINGS-proxy_type-description: Тип прокси (socks5/http). Настройка игнорируется, если тип уже задан в строке с прокси
+SETTINGS-concurrency_limit: Кол-во потоков
+SETTINGS-concurrency_limit-description: Поток - это рабочее место аккаунта. Чем больше потоков, тем больше аккаунтов работают одновременно. Имеет прямое влияние на скорость софта
+SETTINGS-check_proxy_before_work: Проверка прокси перед работой
+SETTINGS-check_proxy_before_work-description: Нужно ли проверять прокси на работоспособность перед запуском каждого модуля?
+SETTINGS-sort_accounts_to_folders: Сортировать аккаунты по папкам
+SETTINGS-sort_accounts_to_folders-description: Как только аккаунт ловит спамблок или умирает, он попадает в соответствующую папку. Нужно ли это делать?
+SETTINGS-thread_start_delay: Задержка перед стартом работы
+SETTINGS-thread_start_delay-description: Аккаунт после подключения будет ждать это время перед началом работы. Рекомендованное значение 10-15
+SETTINGS-peer_flood_limit: Лимит ошибок спамблока
+SETTINGS-peer_flood_limit-description: Во время инвайта аккаунт может поймать ошибку спамблока. Однако в некоторых случаях она является фейковой и её можно пропустить. Эта настройка указывает, сколько раз можно пропускать такие ошибки на аккаунте, прежде чем он уйдёт в реальный спамблок.
+SETTINGS-back_to_menu: Назад в главное меню
+SETTINGS-open_accounts_folder: Открыть папку с аккаунтами
+SETTINGS-open_proxy_file: Открыть файл с прокси
+
+UI-none: нет
+UI-restart_to_apply: Перезапустите программу, чтобы применить изменения
+
+MODULE-account_checker: Проверка аккаунтов
+MODULE-account_checker-category: Работа с расходниками
+MODULE-account_checker-check_for_spamblock: Проверять на спамблок?
+MODULE-account_checker-account_is_alive: жив!
+MODULE-account_checker-dead_after_connecting: оказался мёртвым после подключения.
+MODULE-account_checker-phone_number_banned: забанен.
+MODULE-account_checker-temporary_spamblock: жив, но с временным спамблоком.
+MODULE-account_checker-eternal_spamblock: жив, но с вечным спамблоком.
+MODULE-account_checker-auth_key_duplicated: был использован с двух IP одновременно.
+MODULE-account_checker-auth_key_unregistered: не зарегистрирован.
+MODULE-account_checker-deactivated: деактивирован.
+MODULE-account_checker-reset_all_sessions: слетела сессия аккаунта.
+MODULE-account_checker-other_error: другая ошибка. {}
+
+MODULE-account_checker-results-header: Результаты проверки аккаунтов
+MODULE-account_checker-results-alive: Живые
+MODULE-account_checker-results-dead: Мёртвые
+MODULE-account_checker-results-dead_after_connecting: Мёртвые после подключения
+MODULE-account_checker-results-phone_number_banned: Забанены
+MODULE-account_checker-results-temporary_spamblock: Временный спамблок
+MODULE-account_checker-results-eternal_spamblock: Вечный спамблок
+MODULE-account_checker-results-auth_key_duplicated: Исп. с двух IP
+MODULE-account_checker-results-auth_key_unregistered: Не зарегистрировано
+MODULE-account_checker-results-deactivated: Деактивировано
+MODULE-account_checker-results-reset_all_sessions: Слетели сессии
+MODULE-account_checker-results-other_error: Другая ошибка
+
+MODULE-audience_parser: Сбор аудитории [dim](парсер)[/dim]
+MODULE-audience_parser-category: Основные функции
+MODULE-audience_parser-enter_chats_prompt: Пожалуйста, вставьте чаты для сбора аудитории и нажмите ENTER...
+MODULE-audience_parser-filter-all_members: Все участники
+MODULE-audience_parser-filter-recently_online: Активные (недавно онлайн)
+MODULE-audience_parser-filter-inactive: Неактивные (давно были онлайн)
+MODULE-audience_parser-filter-premium_only: Только с Premium
+MODULE-audience_parser-select_filter: Какую аудиторию собираем?
+MODULE-audience_parser-enter_base_name: Введите имя базы аудитории
+MODULE-audience_parser-enable_deep_parsing: Использовать глубокий сбор? (для групп свыше 10к участников)
+MODULE-audience_parser-chats: Чаты
+MODULE-audience_parser-filter: Аудитория
+MODULE-audience_parser-base: База аудитории
+MODULE-audience_parser-deep_parsing: Глубокий сбор
+MODULE-audience_parser-normal_group_message: В группе {} участников.
+MODULE-audience_parser-big_group_message: Группа довольно большая; в ней {} участников.
+MODULE-audience_parser-starting: начинает собирать аудиторию...
+MODULE-audience_parser-finished: успешно собрали {0} человек
+MODULE-audience_parser-parser_error: Ошибка сбора аудитории. {}
+MODULE-audience_parser-error: Неизвестная ошибка. {}
+MODULE-audience_parser-chat_not_found: Такой группы не существует, либо у вас нет прав для её парсинга.
+MODULE-audience_parser-chat_admin_required: Для сбора аудитории из этого чата (канала?) нужна админка.
+MODULE-audience_parser-invite_hash_expired: Пригласительная ссылка истекла или неправильная.
+
+MODULE-audience_parser-parsing_done_now_writing: Собрали {0} участников из {1} групп. Пишем аудиторию в файл...
+MODULE-audience_parser-saved_audience: Готово! Сохранили аудиторию из {0} человек в файл {1}.
+MODULE-audience_parser-deep_parsing_start_thread: Поток запущен, начинаем поиск по букве {}...
+MODULE-audience_parser-deep_thread_collected: (#{0}) Успешно собрали {1} человек!
+MODULE-audience_parser-deep_chat_done: Успешно собрали {0} человек из группы {1}!
+MODULE-audience_parsing-now_parsing_status: Собираем аудиторию...
+
+MODULE-inviter: Наполнение групп аудиторией [dim](инвайтер)[/dim]
+MODULE-inviter-short_name: Инвайтер
+MODULE-inviter-category: Основные функции
+MODULE-inviter-enter_group: Введите группу, которую нужно наполнить аудиторией
+MODULE-inviter-enter_audience: Вставьте людей, которых нужно добавить в группу
+MODULE-inviter-enter_limit: Введите общий лимит добавлений
+MODULE-inviter-enter_acct_limit: Введите лимит добавлений с одного аккаунта
+MODULE-inviter-enter_delay: Введите задержку между добавлениями (в секундах, можно ввести диапазон)
+MODULE-inviter-parameter-group: Группа
+MODULE-inviter-parameter-audience: Аудитория
+MODULE-inviter-parameter-all_invitings_limit: Общий лимит добавлений
+MODULE-inviter-parameter-invitings_from_account_limit: Лимит добавлений с аккаунта
+MODULE-inviter-parameter-delay_between_invitations: Задержка между добавлениями
+MODULE-inviter-overall_limit_hit: Добавили максимальное кол-во человек. Останавливаем работу.
+MODULE-inviter-account_limit_hit: Аккаунт добавил максимальное кол-во человек. Останавливаем работу.
+MODULE-inviter-joined: успешно вошёл в чат.
+MODULE-inviter-user_not_found: пользователь не найден - {}
+MODULE-inviter-instantly_removed: заинвайтили, но он был сразу списан - {}
+MODULE-inviter-success_invite: успешно добавил [dim]{}[/dim]
+MODULE-inviter-flood_wait: поймал флудвейт {} секунд.
+MODULE-inviter-privacy_restricted: юзер [dim]{}[/dim] запретил себя инвайтить.
+MODULE-inviter-channels_too_much: у юзера [dim]{}[/dim] слишком много каналов и чатов.
+MODULE-inviter-spamblock_error: поймал ошибку спамблока в {} раз. Даём аккаунту отдохнуть...
+MODULE-inviter-sleep: Отдыхаем {} секунд...
+MODULE-inviter-inviter_error: Ошибка инвайтера. {}
+MODULE-inviter-error: Неизвестная ошибка. {}
+MODULE-inviter-no_audience_bases: У вас нет баз аудитории.
+MODULE-inviter-chat_not_found: Чат не найден - {}
+MODULE-inviter-out_of_users: Закончились получатели.
+MODULE-inviter-too_long_flood_wait: Поймал слишком большой флудвейт - {} сек.
+MODULE-inviter-account_spamblocked: Аккаунт поймал спамблок.
+MODULE-inviter-results: Результаты наполнения группы
+MODULE-inviter-results-total_inviting_attempts: Всего попыток добавления
+MODULE-inviter-results-successful_invites: Успешных добавлений
+MODULE-inviter-results-unable_to_invite: Не удалось добавить
+MODULE-inviter-results-privacy_restricted: Запретили себя добавлять
+MODULE-inviter-results-too_many_channels: Слишком много каналов и чатов
+MODULE-inviter-results-not_found: Не найдено
+MODULE-inviter-results-instantly_removed: Списано
+MODULE-inviter-account_statistics: Статистика попыток по аккаунтам
+MODULE-inviter-total_invites_file: Всего попытались добавить
+MODULE-inviter-successful_invites_file: Успешно добавлено
+MODULE-inviter-privacy_restricted_file: Запретили себя добавлять
+MODULE-inviter-failed_file: Не удалось добавить
+MODULE-inviter-log_file: Общий отчёт
+MODULE-inviter-log_file-privacy_restricted: запретил себя инвайтить
+MODULE-inviter-log_file-other: не найден или другая ошибка
+
+MODULE-spammers: Рассылка сообщений
+MODULE-spammers-category: Основные функции
+MODULE-spammers-header: Выберите режим рассылки сообщений:
+MODULE-spammers-content_selector-header: Выберите контент для рассылки:
+MODULE-spammers-content_selector-hint: Контент представляет собой папку внутри папки 'Контент для рассылки', в которой содержатся тексты и вложения.
+MODULE-spammers-out_of_content: У вас нет контента для рассылки!
+MODULE-spammers-spammer_error: Ошибка при попытке отправить сообщение. {}
+MODULE-spammers-error: Внутренняя ошибка при попытке отправить сообщение. {}
+MODULE-pm_spammer-enter_limit: Общий лимит сообщений
+MODULE-pm_spammer-enter_acct_limit: Лимит сообщений с одного аккаунта
+MODULE-pm_spammer-enter_delay: Задержка между отправлениями (в секундах, можно ввести диапазон)
+MODULE-pm_spammer-parameter-content: Контент
+MODULE-pm_spammer-success_send: Отправили сообщение пользователю {0}, текст - {1}
+MODULE-pm_spammer-results: Результаты рассылки
+MODULE-pm_spammer-results-total_sends: Всего отправлено
+MODULE-pm_spammer-results-successful_sends: Успешно отправлено сообщений
+MODULE-pm_spammer-results-not_found: Пользователей не найдено
+MODULE-pm_spammer-account_statistics: Отправок с аккаунта
+MODULE-spammer-user_not_found: Пользователь не найден - {}
+
+MODULE-pm_spammer: Рассылка по ЛС [dim yellow](бета)[/dim yellow]
+MODULE-pm_spammer-short_name: Спамер
+MODULE-pm_spammer-log_file: Общий отчёт
+MODULE-pm_spammer-total_sends_file: Всего попытались отправить
+MODULE-pm_spammer-successful_sends_file: Успешно отправили
+MODULE-pm_spammer-not_found_file: Не найдено
+MODULE-pm_spammer-category: Основные функции
+MODULE-pm_spammer-still_in_development: Данный модуль всё ещё в разработке. Он будет готов к релизу.
+
+MODULE-chat_spammer: [red]Рассылка по чатам [dim](в разработке)[/dim][/red]
+MODULE-chat_spammer-category: Основные функции
+MODULE-chat_spammer-still_in_development: Данный модуль всё ещё в разработке. Он будет готов к релизу.
+
+MODULE-converter_to_tdata: [red]Конвертация аккаунтов session в tdata [dim](в разработке)[/dim][/red]
+MODULE-converter_to_tdata-category: Работа с расходниками
+MODULE-converter_to_tdata-still_in_development: Данный модуль всё ещё в разработке. Он будет готов к релизу.
+
+MODULE-converter_to_session: [red]Конвертация аккаунтов tdata в session [dim](в разработке)[/dim][/red]
+MODULE-converter_to_session-category: Работа с расходниками
+MODULE-converter_to_session-still_in_development: Данный модуль всё ещё в разработке. Он будет готов к релизу.
+
+MODULE-mass_subscribe: [red]Накрутка подписчиков [dim](массовые подписки)[/dim] [dim](в разработке)[/dim][/red]
+MODULE-mass_subscribe-category: Основные функции
+MODULE-mass_subscribe-still_in_development: Данный модуль всё ещё в разработке. Он будет готов к релизу.
+
+MODULE-phones_checker: [red]Чекер номеров [dim](в разработке)[/dim][/red]
+MODULE-phones_checker-category: Основные функции
+MODULE-phones_checker-still_in_development: Данный модуль всё ещё в разработке. Он будет готов к релизу.
+
+MODULE-partner_proxies: Прокси-сервисы
+MODULE-partner_proxies-category: Партнёры проекта
+MODULE-partner_proxies-banner: Для комфортной работы с Telegram важно иметь качественные прокси. Вы можете купить хорошие прокси по одной из ссылок ниже.
+MODULE-partner_proxies-select_proxy: Выберите прокси-сервис, который вам по душе
+
+MODULE-partner_sms_services: SMS-сервисы
+MODULE-partner_sms_services-category: Партнёры проекта
+MODULE-partner_sms_services-banner: Для самостоятельной регистрации аккаунтов Telegram вам понадобится сервис приёма СМС на виртуальные номера. Здесь собраны лучшие сервисы такого рода.
+MODULE-partner_sms_services-select_sms_service: Выберите смс-сервис, который вам по душе
+
+MODULE-partner_panels: Панели накруток
+MODULE-partner_panels-category: Партнёры проекта
+MODULE-partner_panels-banner: На данных площадках вы можете приобрести чаты и каналы, накрутить подписчиков, реакции, лайки, комменты, жалобы для разных социальных сетей.
+MODULE-partner_panels-select_panel: Выберите панель, которая вам по душе
+
+MODULE-settings: Настройки программы
+MODULE-settings-category: Разное
+MODULE-settings-set_int_prefix: Введите новое значение (число)
+MODULE-settings-set_bool_prefix: Введите новое значение (+/-)
+MODULE-settings-set_prefix: Введите новое значение
+
+MODULE-base-not_available:  (недоступен)
+MODULE-base-not_available_in_license: Не удалось запустить модуль - недоступен в вашей лицензии
+MODULE-base-in_development:  (в разработке)
+MODULE-base-in_development_message: Не удалось запустить модуль - он ещё в разработке и будет доступен в будущих версиях.
+MODULE-base-everything_is_ready: Всё готово к запуску:
+MODULE-base-eir_banner-accounts: Аккаунтов
+MODULE-base-eir_banner-proxies: Прокси
+MODULE-base-now_checking_proxy: Идёт проверка прокси...
+MODULE-base-invalid_proxy: Нерабочее прокси {0}:{1}:{2}:******
+MODULE-base-no_proxies_warning: Вы работаете без прокси! Это ПРИВЕДЁТ к банам аккаунтов.
+MODULE-base-no_accounts_error: У вас нет аккаунтов! Модуль не может быть запущен.
+MODULE-base-press_enter_to_start: Нажмите ENTER, чтобы начать работу...
+MODULE-base-press_enter_to_exit: Нажмите ENTER, чтобы выйти...
+MODULE-base-connecting: подключается к Telegram...
+MODULE-base-account_is_dead: Аккаунт {} скорее всего мёртв. Проверьте его модулем "Проверка аккаунтов"
+MODULE-base-task_done: Выполнение задачи завершено!
+MODULE-base-thread_stopped: Поток остановлен.
+MODULE-base-no_proxies_to_change_to: Попытались сменить прокси у {} аккаунтов, но в софт не загружены прокси. Работаем без прокси!
+MODULE-base-parameters-selection-prefix: Выберите действие:
+MODULE-base-parameters-selection-run_module: Запустить модуль
+MODULE-base-parameters-selection-need_to_edit_parameters: Исправить настройки модуля
+MODULE-base-parameters-selection-need_to_exit_module: Выйти в главное меню
+
+PROXY-alive: Рабочее
+PROXY-dead: .
+PROXY-timeout: Не удалось подключиться к прокси. (тайм-аут)
+PROXY-invalid_credentials: Закончилось, либо неправильный логин/пароль
+PROXY_MANAGER-replaced_proxy: Сменили прокси на аккаунте {} на одно из загруженных в софт
+
+DELAYS_MANAGER-waiting_thread_start_delay: Ждём задержку перед стартом потока ({} сек).
+DELAYS_MANAGER-waiting: Ждём {} сек...
+DELAYS_MANAGER-wait_flood_wait: Ждём флудвейт {} секунд...
+
+WARNING-accounts_in_alive_folder: Найдено {} аккаунтов в папке Аккаунты/После проверки/Живые. Пожалуйста, переместите их в папку Аккаунты/Для работы.
+WARNING-inviter_is_in_beta: Инвайтер всё ещё в состоянии беты. Пользуйтесь с осторожностью!
+WARNING-using_conhost: Вы используете версию Windows без Windows Terminal (скорее всего, Windows Server). Программа запущена в режиме совместимости. Для лучшего опыта использования запускайте SMM-SOFT на стандартной Windows 10/11 последних версий.
+WARNING-using_conhost-input: Нажмите ENTER, чтобы продолжить...
+WARNING-deep_parser: Используйте глубокий сбор аудитории только для больших (10-15 тысяч участников и выше) групп. Тщательно отбирайте группы.
+
+INET-used_on_other_device: Ключ уже активирован на другом компьютере.
+INET-key_not_found: Лицензионный ключ не найден.
+INET-unable_to_connect: Не удалось подключиться к серверу. Возможно, на нём ведутся техработы.
+INET-inet_error: Ошибка. {}
+INET-license_expired: Ваша лицензия истекла.
+INET-error: Неизвестная ошибка. {}
+INET-updater-checking_update: Проверка обновлений...
+INET-updater-update_available: Доступно обновление программы! {0} => {1}
+INET-updater-changelog: Список изменений
+INET-updater-downloading_exe_file: Скачиваем обновление...
+INET-updater-downloading_locales: Обновляем файлы локализации...
+INET-updater-done: Готово! Нажмите ENTER, чтобы выйти из программы.
+INET-updater-error: Ошибка при установке обновлений. Отправьте логи разработчику.
+updater-delete_old_main_file_error: Не удалось удалить старый файл data/main_.exe
+
+EXTRAS-audience_selector-header: Выберите базу аудитории:
+EXTRAS-audience_selector-audience_base_hint: Чтобы создать базу аудитории, воспользуйтесь модулем "Сбор аудитории", либо создайте текстовый файл с юзернеймами в папке Базы аудитории/.
