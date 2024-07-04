@@ -16,9 +16,6 @@ from core.ui.ui_manager import UIManager as ui
 from core.localization.interface import _
 from core.taskpool import TaskPoolExecutor
 from core.settings.container import settings
-from inet.telemetry_manager import TelemetryManager
-
-telemetry_manager = TelemetryManager.get_shared()
 
 
 async def module_main():
@@ -71,15 +68,5 @@ async def module_main():
     from .results_presenter import ResultsPresenter
     results_presenter = ResultsPresenter(limits_controller)
     results_presenter.print_inviting_results()
-
-    from .inviter_statistics import InviterStatistics
-
-    await telemetry_manager.send_telemetry_message(
-        __name__,
-        f'''Всего попыток: {InviterStatistics.get_total_inviting_attempts()},
-успешных {InviterStatistics.get_successful_invites()},
-задействовано акков: {len(verifying_result.accounts)},
-воркеров: {len(workers)}'''
-    )
 
     input()

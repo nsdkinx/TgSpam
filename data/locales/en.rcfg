@@ -202,8 +202,6 @@ MODULE-pm_spammer-successful_sends_file: Successfully sent
 MODULE-pm_spammer-not_found_file: Not found
 MODULE-pm_spammer-category: Main functions
 MODULE-chat_spammer-category: Main functions
-INET-license_expired: Your license is expired.
-updater-delete_old_main_file_error: Unable to delete old data/main_.exe file.
 
 MODULE-pm_spammer: PM spammer [dim yellow](beta)[/dim yellow]
 MODULE-pm_spammer-still_in_development: This module is still in development. It will be done by release of the software.
@@ -286,19 +284,6 @@ WARNING-inviter_is_in_beta: Inviter is still in beta state. Use with caution!
 WARNING-using_conhost: You're running a stripped down version of Windows (most likely, Windows Server). SMM-SOFT is running in compatibility mode. For best experience, please use a normal version of Windows 10/11 Home/Pro.
 WARNING-using_conhost-input: Press ENTER to continue...
 WARNING-deep_parser: Use deep parsing only for big (10-15k members and more) groups. Carefully select groups to parse.
-
-INET-used_on_other_device: Key is already activated on another computer.
-INET-key_not_found: License key not found.
-INET-unable_to_connect: Unable to connect to server. Maybe it's at maintenance.
-INET-inet_error: Error. {}
-INET-error: Unknown error. {}
-INET-updater-checking_update: Checking updates...
-INET-updater-update_available: Update available! {0} => {1}
-INET-updater-changelog: Changelog
-INET-updater-downloading_exe_file: Downloading update...
-INET-updater-downloading_locales: Updating localization files...
-INET-updater-done: Done! Press ENTER to exit the program.
-INET-updater-error: Error while checking updates. Maybe the server is on maintenance.
 
 EXTRAS-audience_selector-header: Select the audience base:
 EXTRAS-audience_selector-audience_base_hint: To create an audience base, use the "Audience parser" module or create a text file with usernames in Audience bases/ folder.

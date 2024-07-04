@@ -17,9 +17,6 @@ from .text_report_manager import TextReportManager
 from ..errors import SpammerError
 from ..users_container import UsersContainer
 from ..limits_controller import LimitsController
-from inet.telemetry_manager import TelemetryManager
-
-telemetry_manager = TelemetryManager.get_shared()
 
 
 async def module_main():
@@ -69,12 +66,6 @@ async def module_main():
     from .results_presenter import ResultsPresenter
     results_presenter = ResultsPresenter(limits_controller)
     results_presenter.print_spamming_results()
-
-    from .pm_spammer_statistics import PMSpammerStatistics
-    await telemetry_manager.send_telemetry_message(
-        __name__,
-        f'Разослано {PMSpammerStatistics.get_total_send_attempts()} сообщений {len(workers)} воркерами'
-    )
 
     input()
 

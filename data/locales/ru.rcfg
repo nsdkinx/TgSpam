@@ -286,20 +286,5 @@ WARNING-using_conhost: Вы используете версию Windows без W
 WARNING-using_conhost-input: Нажмите ENTER, чтобы продолжить...
 WARNING-deep_parser: Используйте глубокий сбор аудитории только для больших (10-15 тысяч участников и выше) групп. Тщательно отбирайте группы.
 
-INET-used_on_other_device: Ключ уже активирован на другом компьютере.
-INET-key_not_found: Лицензионный ключ не найден.
-INET-unable_to_connect: Не удалось подключиться к серверу. Возможно, на нём ведутся техработы.
-INET-inet_error: Ошибка. {}
-INET-license_expired: Ваша лицензия истекла.
-INET-error: Неизвестная ошибка. {}
-INET-updater-checking_update: Проверка обновлений...
-INET-updater-update_available: Доступно обновление программы! {0} => {1}
-INET-updater-changelog: Список изменений
-INET-updater-downloading_exe_file: Скачиваем обновление...
-INET-updater-downloading_locales: Обновляем файлы локализации...
-INET-updater-done: Готово! Нажмите ENTER, чтобы выйти из программы.
-INET-updater-error: Ошибка при установке обновлений. Отправьте логи разработчику.
-updater-delete_old_main_file_error: Не удалось удалить старый файл data/main_.exe
-
 EXTRAS-audience_selector-header: Выберите базу аудитории:
 EXTRAS-audience_selector-audience_base_hint: Чтобы создать базу аудитории, воспользуйтесь модулем "Сбор аудитории", либо создайте текстовый файл с юзернеймами в папке Базы аудитории/.

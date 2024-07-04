@@ -11,9 +11,6 @@ from modules._base.parameters.parameters_verifying_result import (
 from core.ui.ui_manager import UIManager as ui
 from core.localization.interface import _
 from .account_checker_worker import AccountCheckerWorker
-from inet.telemetry_manager import TelemetryManager
-
-telemetry_manager = TelemetryManager.get_shared()
 
 
 async def module_main():
@@ -39,7 +36,4 @@ async def module_main():
     controller = AccountCheckingController(workers, parameters)
     await controller.start_working()
 
-    await telemetry_manager.send_telemetry_message(
-        __name__, f'Чекнули {len(verifying_result.accounts)} аккаунтов {len(workers)} воркерами'
-    )
     ui.console.input('\n' + _('MODULE-base-press_enter_to_exit'))

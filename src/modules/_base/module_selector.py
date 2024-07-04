@@ -10,12 +10,8 @@ from core.ui.input_manager import InputManager as im
 from core.localization.interface import _
 from modules._base.modules_repository import ModulesRepository
 from modules import _settings
-from inet.authorizer import Authorizer
-from inet.telemetry_manager import TelemetryManager
 
 logger = logging.getLogger(__name__)
-license = Authorizer.license
-telemetry_manager = TelemetryManager.get_shared()
 
 
 class ModuleSelector:
@@ -34,31 +30,16 @@ class ModuleSelector:
         for module in modules:
             name = self._modules_repository.get_module_name(module)
             _module_name = module.__name__.split('.')[-1]
-            if license.activated_modules == ['*'] or _module_name in license.activated_modules:
-                ui.print_key_and_value(
-                    key='    ' + str(self._module_index),
-                    value=name,
-                    separator='.'
-                )
-            elif _module_name not in license.activated_modules:
-                ui.print_key_and_value(
-                    key='    ' + str(self._module_index),
-                    value='[red]' + name + _("MODULE-base-not_available") + '[/red]',
-                    separator='.'
-                )
+            ui.print_key_and_value(
+                key='    ' + str(self._module_index),
+                value=name,
+                separator='.'
+            )
             self._module_index += 1
 
     async def _run_module(self, module: ModuleType):
         logger.info(f'Running module {module}')
         name = module.__name__.split('.')[-1]
-        if name not in license.activated_modules and license.activated_modules != ['*']:
-            print(_("MODULE-base-not_available_in_license"))
-            await telemetry_manager.send_telemetry_message(
-                __name__,
-                f'Попытка запустить модуль {name} не увенчалась успехом'
-            )
-            ui.console.input(_("MODULE-base-press_enter_to_exit"))
-            return
         return await module.module_main.module_main()
 
     async def select_and_run_module(self):

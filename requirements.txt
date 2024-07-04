@@ -1,0 +1,11 @@
+telethon
+cryptography
+aiohttp
+rich
+python_socks[asyncio]==2.3.0
+tgcrypto
+pyqt6
+wget
+sentry_sdk
+cryptg
+pillow

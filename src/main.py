@@ -14,26 +14,6 @@ if len(sys.argv) == 2:
             print('???')
             sys.exit(1)
 
-# --- Initialize Sentry ---
-try:
-    import sentry_sdk
-    sentry_sdk.init(
-        dsn="https://95252cd5a7ea4a6ca0f65362460f7c54@o4505503923109888.ingest.sentry.io/4505581738131456",
-        traces_sample_rate=1.0
-    )
-except BaseException as e:
-    print('Uh oh! Looks like you got a corrupted SMM-SOFT build.')
-    print('The program failed to start with an error.')
-    print('Please report this to the support team.')
-    print('--------------------------------------')
-    print('Ой! Кажется вам попался сломанный билд SMM-SOFT.')
-    print('Программе не удалось запуститься из-за критической ошибки.')
-    print('Пожалуйста, обратитесь в техническую поддержку.')
-    print('--------------------------------------')
-    print(f'{type(e).__name__}: {str(e)} || at sentry init')
-    input()
-    import sys
-    sys.exit(1)
 
 import asyncio
 import logging
@@ -49,14 +29,6 @@ try:
     from core.utils import DEBUG_MODE
 
     ui.set_window_title(f'{application_name} {application_version}')
-except FileNotFoundError:
-    print('Не запускайте SMM-SOFT напрямую из .exe-файла.')
-    print('Используйте файл Запуск.bat в папке выше.')
-    print('---')
-    print('Do not launch SMM-SOFT directly from the .exe file.')
-    print('Use the .bat file in an upper folder.')
-    input()
-    sys.exit(1)
 except BaseException as e:
     print(f'--- !!! Pre-init app exception !!! ---')
     from core.utils.error_utils import format_exception
@@ -103,9 +75,6 @@ logger.info(f'-*-*-*- Starting application... -*-*-*-')
 from core.exception_hook import global_exception_hook
 sys.excepthook = global_exception_hook
 
-from core.computer_info_logging import log_computer_info
-log_computer_info()
-
 # Setup localization
 
 try:
@@ -119,46 +88,6 @@ except BaseException as e:
 
 async def main():
     WarningsManager.warn_if_using_conhost()
-    from inet.updater.update_controller import UpdateController
-    from inet.updater.core_updater import CoreUpdater
-    from inet.updater.locales_updater import LocalesUpdater
-    from inet.updater.update_server_interactor import UpdateServerInteractor
-    core_updater = CoreUpdater()
-    locales_updater = LocalesUpdater()
-    update_server_interactor = UpdateServerInteractor()
-    update_controller = UpdateController(core_updater, locales_updater, update_server_interactor)
-    await update_controller.update()
-
-    with ui.wrap_with_header(_("ONBOARDING-program_activation_header")):
-        import inet.config
-        from inet.authorizer import Authorizer
-        from inet.errors import InetError
-        from inet.hardware_config import HardwareConfig
-        from inet.encrypted_client import EncryptedClient
-        from inet.license_key_storage import LicenseKeyStorage
-        from inet.telemetry_manager import TelemetryManager
-        from core.filesystem.container import files
-
-        license_key_storage = LicenseKeyStorage(files.license_key_file)
-        encrypted_client = EncryptedClient(inet.config.encrypted_server_address)
-        license_key = license_key_storage.read_key()
-        authorizer = Authorizer(encrypted_client)
-        try:
-            await authorizer.authorize(license_key, HardwareConfig.bios_serial)
-            license_key_storage.write_key(license_key)
-        except InetError as e:
-            logger.exception('InetError.')
-            ui.print(_("INET-inet_error").format(str(e)))
-            ui.console.input(_("MODULE-base-press_enter_to_exit"))
-            sys.exit(1)
-        except BaseException as e:
-            logger.exception('Error while authorizing.')
-            ui.print(_("INET-error").format(str(e)))
-            ui.console.input(_("MODULE-base-press_enter_to_exit"))
-            sys.exit(1)
-
-        telemetry_manager = TelemetryManager(encrypted_client)
-        await telemetry_manager.send_telemetry_message('main', 'Софт запущен!')
 
     # Loading containers and consumables
 
@@ -168,16 +97,10 @@ async def main():
     from modules._base.module_selector import ModuleSelector
     from proxy.software_proxy_container import SoftwareProxyContainer
     from proxy.proxy_manager import ProxyManager
+    from core.filesystem.container import files
 
     software_proxy_container = SoftwareProxyContainer.make_from_file(files.proxy_file)
     proxy_manager = ProxyManager()
-
-    # for proxy in proxy_file.iter_proxies():
-    #     checking_result = await ProxyChecker.check_single_proxy(proxy)
-    #     print(proxy)
-    #     print(checking_result)
-    #
-    # input()
 
     account_loader = AccountLoader(files.accounts_folder)
     modules_repository = ModulesRepository(modules)
@@ -190,12 +113,7 @@ async def main():
             ui.make_accented_text(application_name),
             ui.make_accented_text(application_version)
         ))
-        if authorizer.license.expiry_days >= 900:
-            ui.log(_("MENU-license_expiry-eternal_license"))
-        else:
-            ui.log(_("MENU-license_expiry").format(
-                ui.make_accented_text(authorizer.license.expiry_days)
-            ))
+
         ui.log(_("MENU-consumables_stats").format(
             ui.make_accented_text(account_loader.total_accounts, highlight_zero=True),
             ui.make_accented_text(proxy_manager.total_count, highlight_zero=True)
