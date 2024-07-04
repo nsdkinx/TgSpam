@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""SMM-SOFT client program main file."""
+"""TgSpam client program main file."""
 
 import sys
 if len(sys.argv) == 2:
@@ -39,7 +39,7 @@ except BaseException as e:
 
 # Setup logging
 
-LOG_FILE_PATH = Path(f'data/smmsoft.log')
+LOG_FILE_PATH = Path(f'data/tgspam.log')
 
 logging.getLogger('telethon.network.mtprotosender').disabled = True
 logging.getLogger('telethon.extensions.messagepacker').disabled = True

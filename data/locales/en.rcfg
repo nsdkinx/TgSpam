@@ -281,7 +281,7 @@ DELAYS_MANAGER-wait_flood_wait: Waiting {} second flood wait...
 
 WARNING-accounts_in_alive_folder: Found {} accounts in Accounts/After check/Alive. Please move them into Accounts/For work
 WARNING-inviter_is_in_beta: Inviter is still in beta state. Use with caution!
-WARNING-using_conhost: You're running a stripped down version of Windows (most likely, Windows Server). SMM-SOFT is running in compatibility mode. For best experience, please use a normal version of Windows 10/11 Home/Pro.
+WARNING-using_conhost: You're running a stripped down version of Windows (most likely, Windows Server). TgSpam is running in compatibility mode. For best experience, please use a normal version of Windows 10/11 Home/Pro.
 WARNING-using_conhost-input: Press ENTER to continue...
 WARNING-deep_parser: Use deep parsing only for big (10-15k members and more) groups. Carefully select groups to parse.
 

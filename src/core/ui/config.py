@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-accent_color = 'green'
+accent_color = 'blue'
