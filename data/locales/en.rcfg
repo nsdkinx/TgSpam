@@ -4,15 +4,9 @@ no: no
 account: Account
 group: Group
 
-ONBOARDING-program_activation_header: Program activation
-ONBOARDING-enter_license_key: Enter your license key
-ONBOARDING-activation_success: Thanks for buying!
-
 MENU-header: Main menu
 MENU-welcome: Welcome to {0} {1}!
-MENU-license_expiry: Your license expires in {} days.
 MENU-consumables_stats: Loaded {0} accounts and {1} proxies.
-MENU-license_expiry-eternal_license: You have an [green]eternal[/green] license!
 
 ACCOUNT-database_locked: Account {} is locked. Restart the program to use it
 ACCOUNT-lock_is_acquired: Account {} is locked by another program thread. Waiting for unlock...
@@ -203,48 +197,13 @@ MODULE-pm_spammer-not_found_file: Not found
 MODULE-pm_spammer-category: Main functions
 MODULE-chat_spammer-category: Main functions
 
-MODULE-pm_spammer: PM spammer [dim yellow](beta)[/dim yellow]
-MODULE-pm_spammer-still_in_development: This module is still in development. It will be done by release of the software.
-
-MODULE-chat_spammer: [red]Chat spammer (shilling bot) [dim](in development)[/dim][/red]
-MODULE-chat_spammer-still_in_development: This module is still in development. It will be done by release of the software.
-
-MODULE-converter_to_tdata: [red]Converting session accounts into tdata [dim](in development)[/dim][/red]
-MODULE-converter_to_tdata-category: Working with consumables
-MODULE-converter_to_tdata-still_in_development: This module is still in development. It will be done by release of the software.
-
-MODULE-converter_to_session: [red]Converting tdata accounts into session [dim](in development)[/dim][/red]
-MODULE-converter_to_session-category: Working with consumables
-MODULE-converter_to_session-still_in_development: This module is still in development. It will be done by release of the software.
-
-MODULE-mass_subscribe: [red]Mass subscriptions [dim](in development)[/dim][/red]
-MODULE-mass_subscribe-category: Main functions
-MODULE-mass_subscribe-still_in_development: This module is still in development. It will be done by release of the software.
-
-MODULE-phones_checker: [red]Phones checker [dim](in development)[/dim][/red]
-MODULE-phones_checker-category: Main functions
-MODULE-phones_checker-still_in_development: This module is still in development. It will be done by release of the software.
+MODULE-pm_spammer: PM spammer
 
 MODULE-settings: Program settings
 MODULE-settings-category: Misc
 MODULE-settings-set_int_prefix: Enter new value (number)
 MODULE-settings-set_bool_prefix: Enter new value (+/-)
 MODULE-settings-set_prefix: Enter new value
-
-MODULE-partner_proxies: Proxy services
-MODULE-partner_proxies-category: Project partners
-MODULE-partner_proxies-banner: To work comfortably with Telegram, you need quality proxies. Here you can quickly buy them.
-MODULE-partner_proxies-select_proxy: Select the proxy service that you like most
-
-MODULE-partner_sms_services: SMS services
-MODULE-partner_sms_services-category: Project partners
-MODULE-partner_sms_services-banner: To register Telegram accounts manually, you need a SMS service to receive registration codes on a virtual phone number. Here are the best SMS services.
-MODULE-partner_sms_services-select_sms_service: Select the SMS service that you like most
-
-MODULE-partner_panels: SMM panels
-MODULE-partner_panels-category: Project partners
-MODULE-partner_panels-banner: On these sites you can buy chats and channels, recruit subscribers, reactions, likes, comments, complaints for different social networks.
-MODULE-partner_panels-select_panel: Select the panel that you like most
 
 MODULE-base-not_available:  (unavailable)
 MODULE-base-not_available_in_license: Unable to start module - unavailable for your license
